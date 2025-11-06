@@ -16,3 +16,5 @@ elif simbolo == "*":
 elif simbolo == "/":
     #División
     print("División: ", n1/n2)
+else:
+    print("Operación no válida")
