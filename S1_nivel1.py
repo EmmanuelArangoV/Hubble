@@ -67,7 +67,7 @@ print("EJERCICIO: EDAD FUTURA")
 #Se pide nombre y edad al usuario por consola#
 nombre = input("Por favor digita tu nombre: ")
 edad = int(input("Ahora digita tu edad: "))
-#Se crea una variable donde le incrementara el valor que le di en este caso 10#
+#Se crea una variable donde le incrementara el valor que le di en este caso 10#lkl
 contador = +10
 #Se imprime el un saludo con los datos ingresados del usuario con su edad dentro de 10 años realizando una operacion aritmetica entre 2 variables#
 print(f"Hola {nombre} tienes {edad} años de de edad y en 10 años tendras: {edad+contador} años de edad, vamos pa viejo")
