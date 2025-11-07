@@ -1,5 +1,8 @@
 num = int(input("Ingresa un numero -> "))
 
-for i in range(num + 1):
+suma=0
+
+for i in range(1,num+1):
+    suma +=i
     
-    print(f"La suma de 1 hasta {num} es = ")
+print(f"La suma de 1 hasta {num} es = {suma}")
