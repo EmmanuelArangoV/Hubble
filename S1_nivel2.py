@@ -1,4 +1,4 @@
-'''print()
+print()
 print()
 print("EJERCICIO: MAYOR DE EDAD")
 while True:
@@ -10,9 +10,9 @@ while True:
             print("Eres menor de edad")
         break
     else:
-        print("La edad es incorrecta, intentalo nuevamente: ")'''
+        print("La edad es incorrecta, intentalo nuevamente: ")
 
-'''print()
+print()
 print()
 print("EJERCICIO: NUMERO POSITIVO, NEGATIVO O CERO")
 numero = float(input("Digite un numero: "))
@@ -21,16 +21,16 @@ if numero > 0:
 elif numero == 0:
     print("El numero es igual a cero")
 else:
-    print("El numero es negativo")'''
+    print("El numero es negativo")
 
-'''print()
+print()
 print()
 print("EJERCICIO: PAR O IMPAR")
 numero = int(input("Digite un numero: "))
 if numero %2 ==0:
     print("El numero es par")
 else:
-    print("El numero es impar")'''
+    print("El numero es impar")
 
 print()
 print()
@@ -56,6 +56,32 @@ elif selec == 4:
 else:
     print("Esta opcion es incorrecta")
 print(f"Tu resultado es: {resultado}" )
+
+print()
+print()
+print("EJERCICIO: CLASIFICAR NOTAS DEL 1 AL 5")
+
+nota = float(input("Ingresa tu nota: "))
+if nota >= 4 and nota <= 5:
+    print("Tu nota es excelente")
+elif nota >=3 and nota <4:
+    print("Aprobaste")
+else:
+    print("Haz reprobado")
+
+print()
+print()
+print("EJERCICIO: COMPARADOR DE 3 NUMEROS")
+num1 = float(input("Ingresa tu primer numero: "))
+num2 = float(input("Ingresa tu segundo numero: "))
+num3 = float(input("Ingresa tu tercer numero: "))
+
+num_max = max(num1, num2, num3)
+num_min = min(num1, num2, num3)
+print(f"El numero mayor es: {num_max}")
+print(f"El numero mayor es: {num_min}")
+
+
 
 
 
