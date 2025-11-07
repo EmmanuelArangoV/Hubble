@@ -16,10 +16,10 @@ def DefinirNotas (num_notas):
 def CalculoNotas(num_notas):
     notas = DefinirNotas(num_notas)
     print("-----------------NOTAS----------------------")
-    for i in range(num_notas):
-        prom = SumaPromedioNotas(notas[i]["notas"]) 
+    for personas in notas:
+        prom = SumaPromedioNotas(personas["notas"]) 
         print("------------------//---------------//---------")
-        print(f"{notas[i]["nombre"]} su nota es ---> {prom}")
+        print(f"{personas["nombre"]} su nota es ---> {prom}")
 
 
 def SumaPromedioNotas(arr_notas):
