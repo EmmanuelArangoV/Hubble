@@ -1,13 +1,17 @@
 
 
 while True:
-    respuesta = input("\n¿Quieres ingresar un nombre? -> ")
+    respuesta = input("\n¿Quieres ingresar un estudiante? -> ")
     if respuesta == "no":
         break
 
     estudiantes = {"valeria": [4.5, 4.4, 4.3], "sebas": [3.0, 2.5, 5.0], "luis":[5.0, 4.5, 5.0]}
 
-    nombre = input("Ingrese el nombre -> ")
+    nombre = input("Ingrese el nombre -> ").lower()
+
+    if nombre not in estudiantes:
+        print("\nEl estudiante no existe")
+        break
 
     estudianteactual = estudiantes[nombre]
 
@@ -18,7 +22,7 @@ while True:
     promedio = suma / len(estudianteactual)
     promedio_redondeado = round(promedio,2)
 
-    print(f"\n--{nombre} \nEstas son tus notas\n")
+    print(f"\n--{nombre} \nEstas son tus notas -> \n")
 
     for notas in estudianteactual:
         print(notas)
