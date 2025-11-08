@@ -1,5 +1,16 @@
 print("Let's go to calculate the area of a new Triangle")
 
 while True:
-    height = float(input("Enter the height of the triangle: "))
+    try:
+        height = float(input("Enter the height of the triangle: "))
+        base = float(input("Enter the base of the triangle: "))
+
+        if height < 0 or base < 0:
+            raise ValueError
+        else:
+            area = (height * base)/2
+            print(f"The area of the triangle is {area}.")
+
+    except ValueError:
+        print("Please enter a positive number.")
 
