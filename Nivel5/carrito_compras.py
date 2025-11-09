@@ -84,16 +84,6 @@ def totalCarrito():
         print(f"Total: {total}")
 
 
-
-
-
-
-
-
-
-
-
-
 constante = True
 
 while constante:
