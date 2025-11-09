@@ -18,15 +18,16 @@ articulos = {
     }
 }
 while True:
-    print("1-Agregar \n-2 Eliminar \n-0 Salir")
+    print("-1 Agregar \n-2 Eliminar \n-0 Salir")
 
     r = int(input("Ingresa una opción ----> "))
     match r:
         case 1:
             prod = input("Que producto desea agregar?\ncamisa\nJean\nzapatos\n ----> ").lower()
             carrito.append(articulos[prod])
-        case 2: 
-            print("eliminar")
+        case 2:
+            prod = input("Que producto desea eliminar?\ncamisa\nJean\nzapatos\n ----> ").lower()    
+            carrito.remove(articulos[prod])
         case 0:
             break
         case _:
