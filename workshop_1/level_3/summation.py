@@ -1,3 +1,7 @@
+# Brief: Compute the summation of integers from 1 to a positive limit entered by the user.
+# Validation: require an integer greater than or equal to 1; invalid inputs are rejected.
+# Output: print the total sum and ask the user whether to perform another calculation.
+
 print("Welcome to summation!")
 
 while True:

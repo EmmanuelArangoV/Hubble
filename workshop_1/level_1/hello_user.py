@@ -1,3 +1,8 @@
+# isPositive: helper that returns True for positive ages.
+# Main: prompt for name (non-empty) then prompt for age (positive integer).
+# Validation: age input is validated using isPositive and exception handling.
+# Output: greet the user with name and age, then ask whether to continue.
+
 def isPositive(age):
     if age > 0:
         return True

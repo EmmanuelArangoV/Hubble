@@ -1,3 +1,8 @@
+# Interactive menu to show how input is interpreted as different Python types.
+# Menu: options map to conversions for int, float, string, bool, list, or exit.
+# Validation: numeric conversions use try/except; list input is split by commas.
+# Note: boolean conversion here uses Python bool() on the input string.
+
 menu = "1. Integer \n2. Float \n3. String \n4. Boolean \n5. List \n6. Exit\n"
 
 while True:

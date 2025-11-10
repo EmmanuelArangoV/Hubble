@@ -1,3 +1,8 @@
+# Brief: Simple interactive calculator that supports add, subtract, multiply, divide.
+# Input: prompts user for an option and two numbers; validates numeric input.
+# Flow: repeats until user chooses Quit (option 5). Each branch performs the chosen operation.
+# Error handling: catches ValueError for invalid numeric input and asks again.
+
 print("Welcome to the calculator")
 
 while True:

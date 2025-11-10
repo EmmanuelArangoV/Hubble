@@ -1,3 +1,7 @@
+# Brief: Collect three numbers and report the largest and smallest.
+# Input: prompts until three valid floats are entered; invalid inputs are rejected.
+# Logic: iterates to find biggest and smallest values among the collected numbers.
+# Flow: allows repeating the process while the user chooses to continue.
 print ("Welcome to the Number Comparator")
 
 while True:

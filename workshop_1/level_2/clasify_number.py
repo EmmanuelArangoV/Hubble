@@ -1,3 +1,7 @@
+# Brief: Classify a number as positive, negative or zero.
+# Input: reads a number and handles non-numeric input with a message.
+# Flow: repeats while the user confirms (press 'Y') to continue.
+
 print("What kind of number is this?")
 
 while True:

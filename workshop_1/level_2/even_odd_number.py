@@ -1,3 +1,7 @@
+# Brief: Determine if an integer is even or odd.
+# Validation: converts input to int and handles ValueError for invalid input.
+# Flow: continues in a loop until the user chooses to stop.
+
 print("An odd or even number?")
 
 while True:

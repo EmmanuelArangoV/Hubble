@@ -1,3 +1,11 @@
+# Brief: Store even integers entered by the user and provide listing and duplicate removal.
+# Menu: 1=add (only even ints accepted), 2=show list, 3=remove duplicates, 4=exit.
+# Option 1: convert input to int, check number % 2 == 0 before appending.
+# Option 2: print each stored even number.
+# Option 3: remove duplicate values from the list by iterating and deleting extras.
+# Option 4: print goodbye and break loop.
+# Error handling: catch ValueError for invalid numeric input.
+
 from os import remove
 
 numbers = []

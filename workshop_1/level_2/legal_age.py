@@ -1,3 +1,7 @@
+# Brief: Check whether the entered age represents legal adulthood.
+# Validation: ensures age is an integer and non-negative; handles invalid input.
+# Flow: informs if minor or adult and repeats while the user confirms.
+
 print("Are you of legal age?")
 while True:
     try:

@@ -1,3 +1,8 @@
+# Brief: Classify a numeric grade into Failed, Approved or Excellent.
+# Input: reads a float grade, validates numeric input and checks ranges.
+# Edge cases: handles grades outside expected range and non-numeric input.
+# Flow: repeats until the user declines to continue.
+
 print("Welcome to the Grades Classification")
 
 while True:

@@ -1,3 +1,8 @@
+# Brief: Simple calculator that only performs addition in a loop.
+# Behavior: Prompt the user for two numbers, validate input, print their sum, then ask to continue.
+# Input validation: Uses try/except to handle non-numeric input and restart the loop on error.
+# Continue prompt: Accepts 'Y' (case-insensitive) to repeat; any other response exits.
+
 print("Welcome to Calculator (only for addition)")
 
 while True:

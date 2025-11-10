@@ -1,5 +1,10 @@
 import random
 
+# Brief: Simple number guessing game using a random number within user-provided bounds.
+# Input: ask for two limits, validate and create a random number in the interval.
+# Guess loop: repeatedly prompt for guesses, guide the user with higher/lower hints.
+# Repeat: after a correct guess ask whether to play again; invalid inputs handled with try/except.
+
 print("Guess the number")
 
 while True:

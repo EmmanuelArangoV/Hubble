@@ -1,3 +1,10 @@
+# Brief: Collect numeric inputs in a list and allow listing or averaging them.
+# Menu: 1=add number, 2=list numbers, 3=calculate average, 4=exit.
+# Option 1: validate input as float and append to numbers.
+# Option 2: iterate and print each stored number.
+# Option 3: if list empty notify user; otherwise sum values and divide by count to get average.
+# Option 4: exit the loop and end the program.
+
 numbers = []
 menu = "1. Add numbers.\n2. List numbers.\n3. Calculate average.\n4. Exit\n"
 

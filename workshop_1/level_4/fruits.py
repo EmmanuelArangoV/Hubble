@@ -1,3 +1,10 @@
+# Brief: Manage a small fruit list: add, delete, search, or exit.
+# Menu: 1=add (capitalize and avoid duplicates), 2=delete (remove if present), 3=search (report presence), 4=exit.
+# Add: capitalize input to normalize and check membership before appending.
+# Delete: capitalize and remove if found, otherwise inform user.
+# Search: iterate through list to find the fruit and report whether it exists.
+# Option 4: end program with a goodbye message.
+
 fruits = ["Apple", "Banana", "Cherry"]
 menu = "1. Add fruit.\n2.Delete fruit.\n3. Search fruit.\n4. Exit\n"
 

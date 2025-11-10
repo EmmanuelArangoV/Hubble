@@ -1,3 +1,7 @@
+# Calculate the area of a triangle from user-provided base and height.
+# Validation: ensure numeric input and that base and height are non-negative.
+# Behavior: compute (base * height) / 2 and print result; repeat on invalid input.
+
 print("Let's go to calculate the area of a new Triangle")
 
 while True:
@@ -13,4 +17,3 @@ while True:
 
     except ValueError:
         print("Please enter a positive number.")
-

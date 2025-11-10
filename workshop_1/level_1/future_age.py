@@ -1,3 +1,7 @@
+# Brief: Ask the user for their current age and show their age in 10 years.
+# Validation: ensure the input is a non-negative integer and handle invalid input.
+# Flow: repeat until the user declines by answering anything other than 'Y'.
+
 while True:
     print("How old will you be in ten years?")
     try:

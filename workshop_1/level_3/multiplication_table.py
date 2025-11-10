@@ -1,3 +1,7 @@
+# Brief: Generate and display the multiplication table for a user-provided integer.
+# Loop: ask for a number, print its products from 0 to 10, then ask to continue.
+# Error handling: non-integer input is caught and a message is shown.
+
 print("Do you want to learn the multiplication table?")
 
 while True:
