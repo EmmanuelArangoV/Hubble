@@ -20,7 +20,6 @@ menu = ("Menu\n"
 
 # Initializing inventory with the csv file and loading the information with the method of the class Inventory
 inventory = Inventory(path)
-inventory.load_from_csv()
 
 # Main loop of the program
 while True:
@@ -34,7 +33,7 @@ while True:
         while True:
             try:
                 # Read product details from user (accept comma as decimal separator)
-                name = input("Enter product name: ")
+                name = input("Enter product name: ").capitalize()
                 price = input("Enter product price: ").replace(',', '.')
                 quantity = input("Enter product quantity: ")
 
@@ -63,13 +62,13 @@ while True:
 
     elif menu_choice == "4":
         # Option 4: Remove a product by name
-        product = input("Enter product name: ")
+        product = input("Enter product name: ").capitalize()
         inventory.remove_product(product)
 
     elif menu_choice == "5":
         # Option 5: Update an existing product's details
         try:
-            name = input("Enter product name: ")
+            name = input("Enter product name: ").capitalize()
             price = input("Enter product price: ").replace(',', '.')
             quantity = input("Enter product quantity: ")
 
