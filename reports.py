@@ -1,5 +1,3 @@
-
-
 def all_patient(patients):
     print("List of patients")
     flag = False
@@ -20,19 +18,19 @@ def older_sixty(patients):
     if not flag:
         print("There are no users older than sixty")
 
-def diagnostic(patients):
+def diagnosis(patients):
 
-    diagnostics = {}
+    diagnosis = {}
 
     for i in patients:
-        patient_diagnostic = i.get("diagnostic")
-        if  patient_diagnostic in diagnostics:
-            diagnostics[patient_diagnostic] += 1
+        patient_diagnosis = i.get("diagnosis")
+        if  patient_diagnosis in diagnosis:
+            diagnosis[patient_diagnosis] += 1
         else:
-            diagnostics[patient_diagnostic] = 1
-    for i in list(diagnostics.keys()):
-        print("Diagnostic\n")
-        print(f"Diagnostic: {i}, count: {diagnostics.get(i)}")
+            diagnosis[patient_diagnosis] = 1
+    for i in list(diagnosis.keys()):
+        print("Diagnosis\n")
+        print(f"Diagnosis: {i}, count: {diagnosis.get(i)}")
 
 def total_patients(patients):
     print("Total patients is: ", len(patients))
