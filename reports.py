@@ -34,3 +34,18 @@ def diagnosis(patients):
 
 def total_patients(patients):
     print("Total patients is: ", len(patients))
+
+
+def reports(patients):
+    file_name = "reports.txt"
+
+    with open(file_name, 'w') as file:
+        file.write(f"{'ID':<15}|{'Name':<15}|{'Age':<5}|{'Record':<20}\n")
+        for patient in patients:
+            file.write(f"{patient['id']:<15}|{patient['name']:<15}|{patient['age']:<5}|")
+            for i, record in enumerate(patient['record']):
+                if i == len(patient['record']) - 1:
+                    file.write(f"{record:>43}\n")
+                else:
+                    file.write(f"{record}\n")
+

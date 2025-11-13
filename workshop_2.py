@@ -1,19 +1,19 @@
-patients = [
-    {
-    "id": 1,
-    "name" : "Juan",
-    "age": 23,
-    "gender": "Masculino",
-    "record": ["test1","test2"]
-    },
-    {
-    "id": 2,
-    "name" : "Esteban" ,
-    "age": 12,
-    "gender": "Masculino",
-    "record": ["test3", "test4"]
-    },
-]
+# patients = [
+#     {
+#     "id": 1,
+#     "name" : "Juan",
+#     "age": 23,
+#     "gender": "Masculino",
+#     "record": ["test1","test2"]
+#     },
+#     {
+#     "id": 2,
+#     "name" : "Esteban" ,
+#     "age": 12,
+#     "gender": "Masculino",
+#     "record": ["test3", "test4"]
+#     },
+# ]
 
 def delete_patient(patients):
     band_patient_id = False
@@ -37,20 +37,3 @@ def delete_patient(patients):
                     break
         print(f"{"" if band else "not found"}")     
         print(patients)
-delete_patient(patients)
-
-def reports(patients):
-    file_name = "reports.txt"
-
-    with open(file_name, 'w') as file:    
-        file.write(f"{'ID':<15}|{'Name':<15}|{'Age':<5}|{'Record':<20}\n")
-        for patient in patients:
-            file.write(f"{patient['id']:<15}|{patient['name']:<15}|{patient['age']:<5}|")
-            for i, record in enumerate(patient['record']):
-                if i == len(patient['record'])-1:
-                    file.write(f"{record:>43}\n")
-                else:
-                    file.write(f"{record}\n")
-                
-
-reports(patients)
