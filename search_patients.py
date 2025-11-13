@@ -1,5 +1,3 @@
-patients = []
-
 def print_patient(patient):
     print(f"Id: {patient.get('id')}, Name: {patient.get('name')}, "
           f"Age: {patient.get('age')}, Diagnosis: {patient.get('diagnosis')}")
@@ -9,7 +7,7 @@ def print_patient(patient):
         print(" - ", event)
     print("\n")
 
-def search_by_id(value):
+def search_by_id(patients, value):
     found = False
     for patient in patients:
         if patient.get('id') == value:
@@ -19,7 +17,7 @@ def search_by_id(value):
     if not found:
         print("Patient not found")
 
-def search_by_name(value):
+def search_by_name(patients, value):
     found = False
     for patient in patients:
         if value in patient.get('name'):
@@ -28,7 +26,7 @@ def search_by_name(value):
     if not found:
         print("Patients not found")
 
-def search_by_diagnosis(value):
+def search_by_diagnosis(patients, value):
     found = False
     for patient in patients:
        if value == patient.get('diagnosis'):

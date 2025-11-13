@@ -1,32 +1,3 @@
-patients = [{"id" : 4,
-            "name" : "luis",
-            "age" : 22,
-            "gender" : "male",
-            "diagnosis" : "he is very much in love",
-            "record" : ["has been like this for a long time"]
-            },
-            {"id" : 3,
-            "name" : "luisa",
-            "age" : 20,
-            "gender" : "female",
-            "diagnosis" : "heartbroken",
-            "record" : ["has been like this for a long time"]
-            },
-            {"id" : 2,
-            "name" : "tiffany",
-            "age" : 55,
-            "gender" : "female",
-            "diagnosis" : "cancer",
-            "record" : ["has been like this for a long time"]
-            },
-            {"id" : 1,
-            "name" : "umtiti",
-            "age" : 30,
-            "gender" : "male",
-            "diagnosis" : "can't breathe properly",
-            "record" : ["has been like this for a long time"]
-            }]
-
 def print_patient(patient):
     print(f"Id: {patient.get('id')}, Name: {patient.get('name')}, "
           f"Age: {patient.get('age')}, Diagnosis: {patient.get('diagnosis')}")
@@ -86,10 +57,8 @@ def update_patient(patients):
                     if option != 0:
                         if option == 1:
                             update_age(i)
-
                         elif option == 2:
                             update_diagnosis(i)
-
                         elif option == 3:
                             update_record(i)
                         else:

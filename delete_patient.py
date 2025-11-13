@@ -1,20 +1,3 @@
-# patients = [
-#     {
-#     "id": 1,
-#     "name" : "Juan",
-#     "age": 23,
-#     "gender": "Masculino",
-#     "record": ["test1","test2"]
-#     },
-#     {
-#     "id": 2,
-#     "name" : "Esteban" ,
-#     "age": 12,
-#     "gender": "Masculino",
-#     "record": ["test3", "test4"]
-#     },
-# ]
-
 def delete_patient(patients):
     band_patient_id = False
     while band_patient_id == False:

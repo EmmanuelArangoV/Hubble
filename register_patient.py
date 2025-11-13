@@ -1,14 +1,14 @@
 def register_patients(patients):
     while True:
 
-        patient_id = input("Enter the patient ID -> ")
+        patient_id = input("Enter the patient ID: ")
 
-        flag = patient_exists(patient_id)
+        flag = patient_exists(patient_id, patients)
         if not flag:
-            name = input("Enter your name -> ").capitalize()
+            name = input("Enter your name: ").capitalize()
             age = age_correct()
             gender = patient_gender()
-            diagnosis = input("Enter your diagnosis -> ")
+            diagnosis = input("Enter your diagnosis: ")
             record = record_events()
 
             patient = { "id": patient_id, "name": name, "age": age,
@@ -23,7 +23,7 @@ def register_patients(patients):
             break
 
 
-def patient_exists(patient_id):
+def patient_exists(patient_id, patients):
     for patient in patients:
         if patient["id"] == patient_id:
             print("The user with that ID already exists")
@@ -34,7 +34,7 @@ def patient_exists(patient_id):
 def age_correct():
     while True:
         try:
-            age = int(input("Enter your age -> "))
+            age = int(input("Enter your age: "))
             if age <= 0:
                 raise ValueError
             return age

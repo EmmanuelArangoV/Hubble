@@ -37,5 +37,43 @@ if __name__ == "__main__":
         print("Welcome to the Clinic Management System")
         choice = input(menu_options)
         if choice == '1':
-            register_patients()
-
+            register_patients(patients)
+            save_patients(json_path, patients)
+        elif choice == '2':
+            update_patient(patients)
+            save_patients(json_path, patients)
+        elif choice == '3':
+            delete_patient(patients)
+        elif choice == '4':
+            patient_id = input("Enter patient ID to search: ")
+            search_by_id(patients, patient_id)
+        elif choice == '5':
+            name = input("Enter patient Name to search or part of it: ")
+            search_by_name(patients, name)
+        elif choice == '6':
+            diagnosis = input("Enter Diagnosis to search: ")
+            search_by_diagnosis(patients, diagnosis)
+        elif choice == '7':
+            while True:
+                print("What report do you want to generate?")
+                subchoice = input(report_options)
+                if subchoice == '1':
+                    all_patient(patients)
+                elif subchoice == '2':
+                    older_sixty(patients)
+                elif subchoice == '3':
+                    diagnosis(patients)
+                elif subchoice == '4':
+                    total_patients(patients)
+                elif subchoice == '5':
+                    reports(patients, txt_path)
+                    print(f"Report saved to {txt_path}")
+                elif subchoice == '6':
+                    break
+                else:
+                    print("Invalid option. Please try again.")
+        elif choice == '8':
+            print("Exiting the system. Goodbye!")
+            break
+        else:
+            print("Invalid option. Please try again.")

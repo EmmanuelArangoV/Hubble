@@ -37,7 +37,6 @@ def total_patients(patients):
 
 
 def reports(patients, path):
-
     with open(path, 'w') as file:
         file.write(f"{'ID':<15}|{'Name':<15}|{'Age':<5}|{'Record':<20}\n")
         for patient in patients:
