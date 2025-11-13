@@ -9,11 +9,11 @@ def register_patients():
             name = input("Enter your name -> ").capitalize()
             age = age_correct()
             gender = patient_gender()
-            diagnostic = input("Enter your diagnostic -> ")
+            diagnosis = input("Enter your diagnosis -> ")
             record = record_events()
 
             patient = { "id": patient_id, "name": name, "age": age,
-                "gender": gender, "diagnostic": diagnostic, "record": record }
+                "gender": gender, "diagnosis": diagnosis, "record": record}
             patients.append(patient)
         else:
             print("That  patient already exists")
