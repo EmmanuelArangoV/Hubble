@@ -1,5 +1,4 @@
-patients = []
-def register_patients():
+def register_patients(patients):
     while True:
 
         patient_id = input("Enter the patient ID -> ")
@@ -69,8 +68,5 @@ def record_events():
         if choice != "Y":
             break
     return record
-
-
-register_patients()
 
 

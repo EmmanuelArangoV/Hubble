@@ -1,4 +1,3 @@
-print("Modify patient data")
 patients = [{"id" : 4,
             "name" : "luis",
             "age" : 22,
@@ -97,5 +96,3 @@ def update_patient(patients):
                             print(f"The option {option} does not exist")
                     else:
                         break
-
-update_patient(patients)
