@@ -38,12 +38,13 @@ def total_patients(patients):
 
 def reports(patients, path):
     with open(path, 'w') as file:
-        file.write(f"{'ID':<15}|{'Name':<15}|{'Age':<5}|{'Record':<20}\n")
+        file.write(f"{'ID':<15}{'|Name':<25}{'|Age':<5}{'|Diagnosis':<50}{'|Record':<20}\n")
         for patient in patients:
-            file.write(f"{patient['id']:<15}|{patient['name']:<15}|{patient['age']:<5}|")
+            file.write("_____________________________________________________________________________________________________________________________________________________________\n")
+            file.write(f"{patient['id']:<15}|{patient['name']:<25}|{patient['age']:<5}|{patient['diagnosis']:<50}|")
             for i, record in enumerate(patient['record']):
-                if i == len(patient['record']) - 1:
-                    file.write(f"{record:>43}\n")
+                if i == len(patient['record'])-1:
+                    file.write(f"{record:>103}\n")
                 else:
                     file.write(f"{record}\n")
 

@@ -13,3 +13,8 @@ def load_patients (path: str) -> List[Dict[str, Any]]:
             return patients if isinstance(patients, list) else []
     except FileNotFoundError:
         return []
+    except json.JSONDecodeError:
+        print("Archivo dañado o vacío.")
+        with open(path, "w") as clinic:
+            json.dump([], clinic)
+        return []
