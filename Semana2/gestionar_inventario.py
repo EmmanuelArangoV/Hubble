@@ -62,11 +62,22 @@ while True:
         res = int(input("¿Qué deseas hacer? \n1-Agregar producto \n2-Mostrar Inventario \n3-Calcular estadísticas \n0-Salir \n---> "))
         match res:
             case 1:
-                product_list.append(create_product())
+                res = "yes"
+                while True:
+                    if res == "yes":
+                        product_list.append(create_product())
+                    elif res == "no":
+                        print("Aborting")
+                        break
+                    else:
+                        print("Digita Yes/No")
+                        
+                    res = input("¿Deseas continuar agregando productos? yes/no: ").lower()
             case 2:
                 show_inventory(product_list)
             case 3:
                 calculate_stats(product_list)
+                print(product_list)
             case 0:
                 break
             case _:
