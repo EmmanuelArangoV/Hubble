@@ -47,3 +47,19 @@ def reports(patients, path):
                 else:
                     file.write(f"{record}\n")
 
+def single_diagnosis(patients):
+    if len(patients) > 0:
+        single_diagnosis_patientes = set({})
+        for patient in patients:
+            single_diagnosis_patientes.add(patient['diagnosis'])
+        
+        print("_______________________________________")
+        print("\033[36m|Existing diagnoses\033[0m")
+        for diagnosis in single_diagnosis_patientes:
+            print(f"|{diagnosis}")
+            
+        print("_______________________________________")
+            
+    else:
+        print("There are no users")
+        
