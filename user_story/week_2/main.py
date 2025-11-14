@@ -87,3 +87,8 @@ while True:
     else:
         # Any other input is an invalid menu choice
         print("Invalid choice")
+
+# Project objective:
+# Provide a console application to manage a product inventory,
+# allowing adding, updating, deleting, viewing, and calculating statistics for items,
+# with input validation and data persistence in a CSV file.
