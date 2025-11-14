@@ -1,4 +1,6 @@
 # Import Product and Inventory classes
+from os.path import exists
+
 from user_story.week_2.product import Product
 from user_story.week_2.inventory import Inventory
 
@@ -31,19 +33,35 @@ while True:
 
         # Option 1: Add one or more products to the inventory
         while True:
-            try:
-                # Read product details from user (accept comma as decimal separator)
-                name = input("Enter product name: ").capitalize()
-                price = input("Enter product price: ").replace(',', '.')
-                quantity = input("Enter product quantity: ")
+            # Read product details from user (accept comma as decimal separator)
+            while True:
+                try:
+                    name = input("Enter product name: ").capitalize()
+                    inventory.product_available(name)
+                    break
+                except ValueError as e:
+                    # Handle invalid input when creating Product
+                    print("Invalid input", e)
 
-                # Create Product instance and add it to inventory
-                product = Product(name, price, quantity)
-                inventory.add_product(product)
+            while True:
+                try:
+                    price = input("Enter product price: ").replace(',', '.')
+                    product = Product(name, price, 1) # Temporary quantity for validation
+                    break
+                except ValueError as e:
+                    # Handle invalid input when creating Product
+                    print("Invalid input", e)
 
-            except ValueError as e:
-                # Handle invalid input when creating Product
-                print("Invalid input", e)
+            while True:
+                try:
+                    quantity = input("Enter product quantity: ")
+                    product = Product(name, price, quantity)
+                    inventory.add_product(product)
+                    print("Product added successfully")
+                    break
+                except ValueError as e:
+                    # Handle invalid input when creating Product
+                    print("Invalid input", e)
 
             # Ask if user wants to add another product; break loop if not
             subchoice = input("Would you like to add other product? Press 'Y' to continue:\n").capitalize()

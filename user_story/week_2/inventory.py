@@ -47,7 +47,7 @@ class Inventory:
             if product.name == item.name:
                 item.price = product.price
                 item.quantity = product.quantity
-                print("Product updated successfully")
+                print("Product updated successfully\n")
                 self.save_to_csv()
                 return True
 
@@ -89,4 +89,11 @@ class Inventory:
 
             print(f"Total price of the inventory: ${total_price}\n")
             print(f"There are {len(self.items)} products in inventory")
-            print(f"Total quantity units of the inventory: {total_quantity}")
+            print(f"Total quantity units of the inventory: {total_quantity}\n")
+
+    def product_available(self, name):
+        if name == "":
+            raise ValueError("Product name cannot be empty")
+        for item in self.items:
+            if item.name == name:
+                raise ValueError("Product already exists")

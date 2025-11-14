@@ -14,8 +14,6 @@ class Product:
     # Setter for name with validations
     @name.setter
     def name(self, value):
-        if value == "":
-            raise ValueError("Name cannot be an empty string")
         self._name = value
 
     # Getter for price
@@ -28,10 +26,10 @@ class Product:
     def price(self, value):
         try:
             value = float(value)
-            if value < 0:
-                raise ValueError("Price cannot be negative")
+            if value <= 0:
+                raise ValueError("Price cannot be negative or zero")
         except:
-            raise ValueError("Price cannot be an integer value")
+            raise ValueError("Price should be an integer or decimal value")
         self._price = value
 
     # Getter for quantity
@@ -44,10 +42,10 @@ class Product:
     def quantity(self, value):
         try:
             value = int(value)
-            if value < 0:
-                raise ValueError("Quantity cannot be negative")
+            if value <= 0:
+                raise ValueError("Quantity cannot be negative or zero")
         except:
-            raise ValueError("Quantity cannot be an integer value")
+            raise ValueError("Quantity should be an integer value")
 
         self._quantity = value
 
