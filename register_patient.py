@@ -5,10 +5,10 @@ def register_patients(patients):
 
         flag = patient_exists(patient_id, patients)
         if not flag:
-            name = input("Enter your name: ").capitalize()
+            name = name_validation()
             age = age_correct()
             gender = patient_gender()
-            diagnosis = input("Enter your diagnosis: ")
+            diagnosis = diagnostics()
             record = record_events()
 
             patient = { "id": patient_id, "name": name, "age": age,
@@ -22,6 +22,13 @@ def register_patients(patients):
         if continue_registration != "Y":
             break
 
+def name_validation():
+    while True:
+        name = input("Enter your name: ").capitalize()
+        if name == "":
+            print("Invalid name")
+        else:
+            return name
 
 def patient_exists(patient_id, patients):
     for patient in patients:
@@ -35,7 +42,7 @@ def age_correct():
     while True:
         try:
             age = int(input("Enter your age: "))
-            if age <= 0:
+            if age < 0 or age > 120:
                 raise ValueError
             return age
         except ValueError:
@@ -54,7 +61,7 @@ def patient_gender():
             return "No binary"
         else:
             print("Invalid gender")
-            gender = input("Enter your gender\n1) Male\n2) Female\n3) No binary")
+            gender = input("Enter your gender\n1) Male\n2) Female\n3) No binary\n-> ")
 
 
 def record_events():
@@ -69,4 +76,21 @@ def record_events():
             break
     return record
 
+def diagnostics():
+    menu = "\nEnter your diagnostic\n1) Hypertension\n2) Diabetes Mellitus\n3) Upper Respiratory Infection\n4) Urinary Tract Infection\n5) Allergic Rhinitis\n-> "
+    diagnostic = input(menu)
 
+    while True:
+        if diagnostic == "1":
+            return "Hypertension"
+        elif diagnostic == "2":
+            return "Diabetes Mellitus"
+        elif diagnostic == "3":
+            return "Upper Respiratory Infection"
+        elif diagnostic == "4":
+            return "Urinary Tract Infection"
+        elif diagnostic == "5":
+            return "Allergic Rhinitis"
+        else:
+            print("\nInvalid diagnostic")
+            diagnostic = input(menu)

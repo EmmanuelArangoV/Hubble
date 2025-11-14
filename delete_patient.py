@@ -3,7 +3,9 @@ def delete_patient(patients):
     while band_patient_id == False:
         band = False
         try:
-            patient_id = int(input("Type a patient ID to delete: "))
+            patient_id = input("Type a patient ID to delete: ")
+            if patient_id == "":
+                raise ValueError
         except ValueError:
             print("Type a valid ID")
         for i,patient in enumerate(patients):
@@ -12,12 +14,11 @@ def delete_patient(patients):
                 band_patient_id = True
                 confirm = input(f"You will eliminate the patient {patient["name"]}. Are you sure? Yes/No: ").lower()
                 if confirm == "yes":
-                    patients.pop(1)
+                    patients.pop(i)
                     print(f"Patient {patient["name"]} was deleted")
                     break
                 else:
                     print("Deleting canceled")
                     break
-        print(f"{"" if band else "not found"}")
-        print(patients)
+        print(f"{"" if band else "Not found"}")
 

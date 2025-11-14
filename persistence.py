@@ -14,7 +14,7 @@ def load_patients (path: str) -> List[Dict[str, Any]]:
     except FileNotFoundError:
         return []
     except json.JSONDecodeError:
-        print("Archivo dañado o vacío.")
+        print("Empty or invalid JSON file. Initializing with an empty list.")
         with open(path, "w") as clinic:
             json.dump([], clinic)
         return []

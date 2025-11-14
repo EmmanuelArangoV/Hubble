@@ -1,0 +1,24 @@
+[
+    {
+        "id": "1013341987",
+        "name": "Emmanuel",
+        "age": 20,
+        "gender": "Male",
+        "diagnosis": "Hypertension",
+        "record": [
+            "First consult",
+            "Follow-up"
+        ]
+    },
+    {
+        "id": "3423678",
+        "name": "Daniela",
+        "age": 33,
+        "gender": "Female",
+        "diagnosis": "Hypertension",
+        "record": [
+            "Surgery",
+            "Medication"
+        ]
+    }
+]

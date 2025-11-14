@@ -29,7 +29,6 @@ def diagnosis(patients):
         else:
             diagnosis[patient_diagnosis] = 1
     for i in list(diagnosis.keys()):
-        print("Diagnosis\n")
         print(f"Diagnosis: {i}, count: {diagnosis.get(i)}")
 
 def total_patients(patients):

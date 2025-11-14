@@ -5,7 +5,7 @@ def print_patient(patient):
     print("Record of events:")
     for event in patient.get('record', []):
         print(" - ", event)
-    print("\n")
+    print("")
 
 def update_age(i):
     print_patient(i)
@@ -20,7 +20,23 @@ def update_age(i):
 
 def update_diagnosis(i):
     print_patient(i)
-    new_diagnosis = input("You chose to modify diagnosis, enter the diagnosis to update: ")
+    menu = ("Enter your new diagnostic\n1) Hypertension\n2) Diabetes Mellitus\n3) Upper Respiratory Infection\n"
+            "4) Urinary Tract Infection\n5) Allergic Rhinitis\n-> ")
+    option = input(menu)
+    if option == "1":
+        new_diagnosis = "Hypertension"
+    elif option == "2":
+        new_diagnosis = "Diabetes Mellitus"
+    elif option == "3":
+        new_diagnosis = "Upper Respiratory Infection"
+    elif option == "4":
+        new_diagnosis = "Urinary Tract Infection"
+    elif option == "5":
+        new_diagnosis = "Allergic Rhinitis"
+    else:
+        print("The option does not exist, the diagnosis will not be changed")
+        return
+
     confirm_diagnosis = input("You are about to modify the diagnosis, are you sure? yes/no: ").lower()
     if confirm_diagnosis == "yes":
         print("The diagnosis was successfully updated, here is the information \n")
@@ -40,28 +56,27 @@ def update_record(i):
 
 def update_patient(patients):
     while True:
-        option = -99
-        id = int(input("Enter the ID to modify the patient: "))
-        if id == -1:
-            print("Ending the program")
+        found = False
+        print("You have found the patient, what would you like to modify?")
+        print("==> 1. Age")
+        print("==> 2. Diagnosis")
+        print("==> 3. Record")
+        print("==> 0. Exit")
+        option = input("Choose an option: ")
+        if option == "0":
             break
-        while option != 0:
+        if option not in ["1", "2", "3"]:
+            print(f"The option {option} does not exist")
+        else:
+            id = input("Enter the ID to modify the patient: ")
             for i in patients:
                 if id == i.get("id"):
-                    print("You have found the patient, what would you like to modify?")
-                    print("==> 1. Age")
-                    print("==> 2. Diagnosis")
-                    print("==> 3. Record")
-                    print("==> 0. Exit")
-                    option = int(input("Choose an option: "))
-                    if option != 0:
-                        if option == 1:
-                            update_age(i)
-                        elif option == 2:
-                            update_diagnosis(i)
-                        elif option == 3:
-                            update_record(i)
-                        else:
-                            print(f"The option {option} does not exist")
-                    else:
-                        break
+                    found = True
+                    if option == "1":
+                        update_age(i)
+                    elif option == "2":
+                        update_diagnosis(i)
+                    elif option == "3":
+                        update_record(i)
+            if not found:
+                print("The ID does not exist")
