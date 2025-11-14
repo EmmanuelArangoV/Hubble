@@ -2,7 +2,7 @@ from register_patient import register_patients
 from update_patient import update_patient
 from delete_patient import delete_patient
 from search_patients import search_by_id, search_by_name, search_by_diagnosis, filter
-from reports import reports, all_patient, older_sixty, diagnosis, total_patients
+from reports import reports, all_patient, older_sixty, diagnosis, total_patients, single_diagnosis
 from persistence import save_patients, load_patients
 from pathlib import Path
 
@@ -29,7 +29,8 @@ report_options = (""
                   "3. Count by diagnosis\n"
                   "4. Total number of patients\n"
                   "5. Import in txt file\n"
-                  "6. Back to main menu\n")
+                  "6. Single Diagnosis\n"
+                  "7. Back to main menu\n")
 
 
 
@@ -71,6 +72,8 @@ if __name__ == "__main__":
                     reports(patients, txt_path)
                     print(f"Report saved to {txt_path}")
                 elif subchoice == '6':
+                    single_diagnosis(patients)
+                elif subchoice == '7':
                     break
                 else:
                     print("Invalid option. Please try again.")
