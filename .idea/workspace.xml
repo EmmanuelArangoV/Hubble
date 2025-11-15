@@ -6,18 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6f26b82a-db84-46ff-9bc3-082692b937b8" name="Changes" comment="">
       <changelist_data name="EmmanuelArangoV" email="emmanuelarangov@gmail.com" date="1762732975000" automatic="true" />
-      <change beforePath="$PROJECT_DIR$/.idea/Hubble.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Hubble.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/clinic_management.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delete_patient.py" beforeDir="false" afterPath="$PROJECT_DIR$/delete_patient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patients.json" beforeDir="false" afterPath="$PROJECT_DIR$/patients.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence.py" beforeDir="false" afterPath="$PROJECT_DIR$/persistence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register_patient.py" beforeDir="false" afterPath="$PROJECT_DIR$/register_patient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports.py" beforeDir="false" afterPath="$PROJECT_DIR$/reports.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports.txt" beforeDir="false" afterPath="$PROJECT_DIR$/reports.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search_patients.py" beforeDir="false" afterPath="$PROJECT_DIR$/search_patients.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_patient.py" beforeDir="false" afterPath="$PROJECT_DIR$/update_patient.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,43 +30,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.add_numbers.executor": "Run",
-    "Python.addition_until.executor": "Run",
-    "Python.atm.executor": "Run",
-    "Python.average_numbers.executor": "Run",
-    "Python.basic_calculator.executor": "Run",
-    "Python.clinic_management.executor": "Run",
-    "Python.counter.executor": "Run",
-    "Python.even_numbers.executor": "Run",
-    "Python.fruits.executor": "Run",
-    "Python.grade_system.executor": "Run",
-    "Python.guess_number.executor": "Run",
-    "Python.hello_user.executor": "Run",
-    "Python.inventory.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.multiplication_table.executor": "Run",
-    "Python.product.executor": "Run",
-    "Python.regressive_counter.executor": "Run",
-    "Python.shopping_cart.executor": "Run",
-    "Python.summation.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "develop",
-    "last_opened_file_path": "D:/Emmanuel Arango/Riwi/Modulo1/Hubble/user_story/week_1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.add_numbers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.addition_until.executor&quot;: &quot;Run&quot;,
+    &quot;Python.atm.executor&quot;: &quot;Run&quot;,
+    &quot;Python.average_numbers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.basic_calculator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.clinic_management.executor&quot;: &quot;Run&quot;,
+    &quot;Python.counter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.even_numbers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fruits.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grade_system.executor&quot;: &quot;Run&quot;,
+    &quot;Python.guess_number.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hello_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python.inventory.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.multiplication_table.executor&quot;: &quot;Run&quot;,
+    &quot;Python.product.executor&quot;: &quot;Run&quot;,
+    &quot;Python.regressive_counter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.shopping_cart.executor&quot;: &quot;Run&quot;,
+    &quot;Python.summation.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Emmanuel Arango/Riwi/Modulo1/Hubble/user_story/week_1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Emmanuel Arango\Riwi\Modulo1\Hubble\user_story\week_1" />
