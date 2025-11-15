@@ -1,6 +1,7 @@
-'''print()
+print()
 print()
 print("EJERCICIO: SISTEMAS DE CALIFICACION")
+##Se usan condicionales para clasificar las notas y se usa bucle en caso de que el usuario no cumpla la condicion, continue en caso de que si, y break para terminar el programa#
 while True:
     try:
         matematicas = float(input("Ingrese la calificacion de matematicas: "))
@@ -24,6 +25,7 @@ print()
 print()
 print("EJERCICIO: CARRITO DE COMPRAS")
 carrito = []
+#Se crea lista vacia, y bucle y continue por si el usuario desea agregar algo mas al carrito con el metodo append#
 while True:
     try:
         producto = input("Ingrese el nombre del producto para agregar al carrito: ")
@@ -52,11 +54,12 @@ while True:
             break
     
     except ValueError:
-        print("Error en la entrada, intente de nuevo.")'''
+        print("Error en la entrada, intente de nuevo.")
 
 print()
 print()
 print("EJERCICIO: AGENDA DE CONTACTOS")
+#Se crea diccionario vacio, y bucle y continue si el usuario desea agregar otro contacto con metodo items y asignacion clave valor#                                                                             metodo append#
 agenda = {}
 while True:
     try:

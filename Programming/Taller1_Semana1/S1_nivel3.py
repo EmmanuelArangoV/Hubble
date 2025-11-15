@@ -1,4 +1,4 @@
-'''print()
+print()
 print()
 print("EJERCICIO: CONTAR DEL 1 AL 10")
 #Usando un bucle for para contar del 1 al 10#
@@ -53,7 +53,7 @@ while True:
         print("Adivinaste el numero")
         break
     else:
-        print("Intentalo nuevamente")'''
+        print("Intentalo nuevamente")
 
 print()
 print()

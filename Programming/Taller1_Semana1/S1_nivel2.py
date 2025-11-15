@@ -1,6 +1,7 @@
 print()
 print()
 print("EJERCICIO: MAYOR DE EDAD")
+#Bucle while para que repita la condicion en caso de que sea incorrecta la edad, en caso de que se cumpla se rompe y finaliza el programa#
 while True:
     edad = int(input("Digita tu edad: "))
     if edad > 0 and edad <90:
@@ -15,6 +16,7 @@ while True:
 print()
 print()
 print("EJERCICIO: NUMERO POSITIVO, NEGATIVO O CERO")
+#Se usan condiciones tomando como referencia el 0#
 numero = float(input("Digite un numero: "))
 if numero > 0:
     print("El numero es positivo")
@@ -26,6 +28,7 @@ else:
 print()
 print()
 print("EJERCICIO: PAR O IMPAR")
+#Se realiza operacion matematica con operadores aritmeticos y si cumple esa funcion es par#
 numero = int(input("Digite un numero: "))
 if numero %2 ==0:
     print("El numero es par")
@@ -35,6 +38,7 @@ else:
 print()
 print()
 print("EJERCICIO: CALCULADORA BASICA CON +,-,*,/")
+#Mostramos por pantalla opciones para realizar operaciones#
 print("1: Suma")
 print("2: Resta")
 print("3: Multiplicacion")
@@ -44,7 +48,7 @@ selec = int(input("Ingresa la opcion para la operacion que de deseas realizar: "
 
 num1 = float(input("Digite un numero: "))
 num2 = float(input("Digite el segundo numero: "))
-
+#usa operadores aritmeticos junto a condicionales#
 if selec == 1:
     resultado= num1 + num2
 elif selec == 2:
@@ -60,7 +64,7 @@ print(f"Tu resultado es: {resultado}" )
 print()
 print()
 print("EJERCICIO: CLASIFICAR NOTAS DEL 1 AL 5")
-
+##Se usan condicionales para clasificar las notas#
 nota = float(input("Ingresa tu nota: "))
 if nota >= 4 and nota <= 5:
     print("Tu nota es excelente")
@@ -75,15 +79,8 @@ print("EJERCICIO: COMPARADOR DE 3 NUMEROS")
 num1 = float(input("Ingresa tu primer numero: "))
 num2 = float(input("Ingresa tu segundo numero: "))
 num3 = float(input("Ingresa tu tercer numero: "))
-
+#Se usan funciones predefinidas para obtener el mayor y menor numero#
 num_max = max(num1, num2, num3)
 num_min = min(num1, num2, num3)
 print(f"El numero mayor es: {num_max}")
 print(f"El numero mayor es: {num_min}")
-
-
-
-
-
-
-  
