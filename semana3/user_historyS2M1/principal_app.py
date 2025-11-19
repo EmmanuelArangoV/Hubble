@@ -27,8 +27,9 @@ while True:
                 print(product_list)
             case 7:
                 archivos.save_csv(product_list)
+                product_list.clear()
             case 8:
-                print("Cargar")
+                archivos.load_csv()
             case 0:
                 break
             case _:

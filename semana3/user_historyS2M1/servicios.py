@@ -1,5 +1,10 @@
+def validate_empty_inventory(inventory):
+    if len(inventory) == 0:
+        return False
+    return True
 
-def validar_entradas(tipo, prompt, validacion_extra = None):
+
+def validate_entrys(tipo, prompt, validacion_extra = None):
     mesajes = {
         int : "Ingresar un número y que sea mayor a 0",
         float: "Ingresar un número y que sea mayor a 0",
@@ -19,11 +24,11 @@ def create_product():
     product = {}
     
     #solicitar 
-    name_prod = validar_entradas(str, "Ingresar nombre del producto: ", lambda x:len(x) > 0)
+    name_prod = validate_entrys(str, "Ingresar nombre del producto: ", lambda x:len(x) > 0)
     
-    price_product = validar_entradas(float, "Ingresar valor del producto: ", lambda x : x>0)
+    price_product = validate_entrys(float, "Ingresar valor del producto: ", lambda x : x>0)
 
-    amount_products = validar_entradas(int, "Ingresar cantidad de productos: ", lambda x:x>0)
+    amount_products = validate_entrys(int, "Ingresar cantidad de productos: ", lambda x:x>0)
 
     product["name"] = name_prod
     product["price"] = price_product
@@ -32,7 +37,7 @@ def create_product():
     return product
 
 def show_inventory(products_list):
-    if len(products_list) == 0:
+    if validate_empty_inventory(products_list) == 0:
         print("\033[31mInventario vacío, Agrega productos para visualizarlos\033[0m")
     else:
         for product in products_list:
@@ -53,4 +58,3 @@ def calculate_stats(products_list):
         print("--------------------------------------------------------------------------------------------")
         
     print(f"{'Totales':<15}|{'':<10}|{sum_products:<10}|{sum_total:<10}\n")
-    
