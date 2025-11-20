@@ -9,6 +9,5 @@ def save_txt(nombre):
 def write_line(nombre, inventario):
     with open(nombre , 'a') as file:
          for i in inventario:
-            print(i)
             line = f"{i["name"]}, {i["price"]}, {i["amount"]}\n"
             file.write(line)
