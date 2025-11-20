@@ -33,12 +33,10 @@ while True:
             case 7:
                 if not os.path.exists(ruta_txt):
                     save_txt(ruta_txt)
-                if not os.path.exists(ruta_json):
-                    create_json(ruta_json,product_list)
-                else:
-                    add_products(ruta_json,product_list)
+                    
                     
                 write_line(ruta_txt,product_list)
+                create_json(ruta_json,product_list)    
                 product_list.clear()
             case 8:
                 print("save")
