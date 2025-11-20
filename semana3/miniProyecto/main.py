@@ -1,7 +1,7 @@
 import servicios
 from archivos_txt import save_txt,write_line
 from archivos_json import create_json, agregar_data
-from archivos_csv import create_csv, add_registro, load_register
+from archivos_csv import create_csv, add_registro, fusionar_datos, print_data
 import os
 
 product_list = []
@@ -28,7 +28,7 @@ while True:
                         
                     res = input("¿Deseas continuar agregando productos? yes/no: ").lower()
             case 2:
-                print(load_register(ruta_csv,product_list))
+                print_data(ruta_csv)
             case 3:
                 servicios.calculate_stats(product_list)
                 print(product_list)
@@ -38,17 +38,20 @@ while True:
                 
                 if not os.path.exists(ruta_json):
                     create_json(ruta_json,product_list)
+                else:
+                    agregar_data(ruta_json,product_list)
+
                 
                 if not os.path.exists(ruta_csv):
                     create_csv(ruta_csv,product_list)
                     
                 write_line(ruta_txt,product_list)
-                agregar_data(ruta_json,product_list)
                 add_registro(ruta_csv,product_list)
                   
                 product_list.clear()
             case 8:
                 print("save")
+                print(fusionar_datos("semana3/miniProyecto/inventario_fusionar.csv", ruta_csv))
             case 0:
                 break
             case _:
