@@ -41,7 +41,22 @@ class CRUD:
                 self.sobreescribir(archivo, data)
                 break
             
-            print("El ID no se encontró")
+            
+    def actualizar_por_id(self, archivo, id_actualizar, nombre= None, edad=None):
+        data = self.listar(archivo)
+        for persona in range(len(data)):
+            if data[persona][0] == id_actualizar:
+                if nombre is not None:
+                    data[persona][1] = nombre
+                    self.sobreescribir(archivo, data)
+                    return f"Nombre Actualizada a {nombre}"
+                
+                if edad is not None:
+                    data[persona][2] = edad
+                    self.sobreescribir(archivo, data)
+                    return f"Edad Actualizada a {edad}"
+                break
+            
 
     def sobreescribir(self, archivo, data):
         with open(archivo, 'w', newline='') as file:
