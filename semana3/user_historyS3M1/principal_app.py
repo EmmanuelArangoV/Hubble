@@ -1,5 +1,5 @@
 import servicios
-import archivos
+from archivos import save_csv, cargar_csv
 
 product_list = []
 
@@ -23,13 +23,13 @@ while True:
             case 2:
                 servicios.show_inventory(product_list)
             case 3:
-                servicios.calculate_stats(product_list)
+                servicios.calculate_stats()
                 print(product_list)
             case 7:
-                archivos.save_csv(product_list)
+                save_csv(product_list)
                 product_list.clear()
             case 8:
-                archivos.load_csv()
+                cargar_csv()
             case 0:
                 break
             case _:

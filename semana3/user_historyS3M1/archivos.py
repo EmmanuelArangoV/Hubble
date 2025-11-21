@@ -2,17 +2,16 @@ import csv
 import os
 import tkinter as tk
 from tkinter import filedialog
-from servicios import validate_empty_inventory
 
-
+fieldnames = ['name','price','amount']
     
 def save_csv(inventario, incluir_heads=True):
-    if validate_empty_inventory(inventario):
+    if len(inventario):
         try:
             ruta = request_ruta()
             file_exist = os.path.isfile(ruta + "/inventario.csv") # valida si el archivo existe
-            with open("/home/cohorte5/Escritorio/Hubble" + "/inventario.csv", 'a', newline='', encoding='utf-8') as archivo:
-                writer = csv.DictWriter(archivo, fieldnames=inventario[0].keys())
+            with open(ruta + "/inventario.csv", 'a', newline='', encoding='utf-8') as archivo:
+                writer = csv.DictWriter(archivo, fieldnames=fieldnames)
                 if not file_exist: #si es True se añaden los encabezados, de lo contrario no se añaden
                     #Escribir encabezados
                     writer.writeheader()
@@ -29,11 +28,39 @@ def save_csv(inventario, incluir_heads=True):
 def load_csv():
      ruta = request_ruta("file")
      with open(ruta.name, 'r', encoding='utf-8', newline='') as archivo:
-         lector = csv.reader(archivo)
-         for fila in lector:
-             print(fila)
-         
-         
+         lector = csv.DictReader(archivo)
+         return list(lector)
+     
+def add_inventory_csv():
+    ruta = os.getcwd()
+    data = load_csv()
+    with open(ruta + "/inventario.csv", 'a', newline='', encoding='utf-8') as archivo:
+        writer = csv.DictWriter(archivo, fieldnames=fieldnames)
+        writer.writerows(data)
+        return f"\033[32mProducto agregado en --> {ruta} \033[0m"
+
+def overwrite_csv(ruta):
+    lista_nueva = load_csv()
+    with open(ruta + "/inventario.csv", 'w', newline='', encoding='utf-8') as archivo:
+        writer = csv.DictWriter(archivo, fieldnames=fieldnames)
+        #Escribir encabezados
+        writer.writeheader()
+        writer.writerows(lista_nueva)
+        return "Archivo sobreescrito"
+    
+def cargar_csv():
+    ruta = request_ruta()
+    print(ruta + "/inventario.csv")
+    if os.path.exists(ruta + "/inventario.csv"):
+        opcion = input("Desea sobreescribir el archivo? S/n ").lower()
+        if opcion == 's':
+            print(overwrite_csv(ruta))
+        elif opcion == 'n':
+            print(add_inventory_csv())
+            print("agregar")
+        else:" opcion invalida"
+
+                 
     
 def request_ruta(type="directory"):
     # Crear la ventana principal (aunque no la mostramos)

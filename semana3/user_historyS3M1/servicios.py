@@ -1,3 +1,5 @@
+from archivos import load_csv
+
 def validate_empty_inventory(inventory):
     if len(inventory) == 0:
         return False
@@ -43,14 +45,15 @@ def show_inventory(products_list):
         for product in products_list:
             print(f"Producto: {product["name"]} | Precio: {product["price"]}  | Cantidad: {product["amount"]}")
 
-def calculate_stats(products_list):
+def calculate_stats():
+    products_list = load_csv()
     total = 0
     sum_total = 0
     sum_products = 0
     print("--------------------------------------------------------------------------------------------")
     print(f"{'Producto':<15}|{'Precio':<10}|{'cantidad':<10}|{'Total':<10}")
     for product in products_list:
-        total = product["price"]*product["amount"]
+        total = int(product["price"])*int(product["amount"])
         sum_total += total
         sum_products += product["amount"]
         print("--------------------------------------------------------------------------------------------")
