@@ -1,1 +1,8 @@
-id,name,password,team,role
+id,name,role,password,team
+admin,Admin User,Admin,$2b$12$cGBTXwmujU7iee6EtUS9zOU4Y2Ej.f5tR4SWyWzQyvc.iSuVw9eOS,N/A
+player1,Player One,Player,$2b$12$lO2LTaaEJLD6hy1sxR9EYuTU/SVMSDvv38ek9npe4JdsyKIzjazhC,N/A
+player2,Player Two,Player,$2b$12$39zzfKMp8tSQ3nZgjLfVKeLUp2U1JcHe95.2idRIyJ72h3EfoijFe,N/A
+player3,Player Three,Player,$2b$12$rfmYQUC4uW.qLXh7LRMWHelQUn8a/fR9fo24B.W8B/uDSlg1LeEAC,N/A
+player4,Player Four,Player,$2b$12$uomvnSBbuEoZxSVUvPfbeeDqvzReHHL7.BSfbqJ4cSEouVSVfR8qS,N/A
+player5,Player Five,Player,$2b$12$Ros/1aP3wHnSByW0Ecs0oO28afsAvkVNwNxS68yxvJrVNKaaUr9ym,N/A
+1013341987,EMMANUEL,Player,$2b$12$K7j1n3/gWlidsbRPSWaA7eDcjru2HutSNcsH4213eYxQ3wFttOb5m,Leones
